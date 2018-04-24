@@ -14,6 +14,7 @@
 		340436CD208DB5B600BB70CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340436CC208DB5B600BB70CD /* Assets.xcassets */; };
 		340436D0208DB5B600BB70CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340436CE208DB5B600BB70CD /* LaunchScreen.storyboard */; };
 		340436D3208DB5B600BB70CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 340436D2208DB5B600BB70CD /* main.m */; };
+		340436DF208DB5FC00BB70CD /* IrregularBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 340436DE208DB5FC00BB70CD /* IrregularBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		340436CF208DB5B600BB70CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		340436D1208DB5B600BB70CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340436D2208DB5B600BB70CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		340436DD208DB5FC00BB70CD /* IrregularBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IrregularBtn.h; sourceTree = "<group>"; };
+		340436DE208DB5FC00BB70CD /* IrregularBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IrregularBtn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		340436BF208DB5B600BB70CD /* TestIrregularView */ = {
 			isa = PBXGroup;
 			children = (
+				340436D9208DB5BD00BB70CD /* View */,
 				340436C0208DB5B600BB70CD /* AppDelegate.h */,
 				340436C1208DB5B600BB70CD /* AppDelegate.m */,
 				340436C3208DB5B600BB70CD /* ViewController.h */,
@@ -72,6 +76,15 @@
 				340436C9208DB5B600BB70CD /* TestIrregularView.xcdatamodeld */,
 			);
 			path = TestIrregularView;
+			sourceTree = "<group>";
+		};
+		340436D9208DB5BD00BB70CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				340436DD208DB5FC00BB70CD /* IrregularBtn.h */,
+				340436DE208DB5FC00BB70CD /* IrregularBtn.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +161,7 @@
 				340436C5208DB5B600BB70CD /* ViewController.m in Sources */,
 				340436CB208DB5B600BB70CD /* TestIrregularView.xcdatamodeld in Sources */,
 				340436D3208DB5B600BB70CD /* main.m in Sources */,
+				340436DF208DB5FC00BB70CD /* IrregularBtn.m in Sources */,
 				340436C2208DB5B600BB70CD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
