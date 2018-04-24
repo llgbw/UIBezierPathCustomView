@@ -12,8 +12,6 @@
 
 @property (nonatomic, strong) UIBezierPath *path;
 
-@property (nonatomic, strong) CAShapeLayer * shapeLayer;
-
 @end
 
 @implementation IrregularBtn

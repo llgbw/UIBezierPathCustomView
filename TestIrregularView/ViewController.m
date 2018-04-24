@@ -25,10 +25,10 @@
     [self view1]; //右斜边梯形
     [self view2]; //平行四边形
     [self view3]; //左斜边梯形
-    
+
     [self view4]; //六角形
     [self view5]; //对折形状
-    
+
     [self view6]; //箭头
     
 }
