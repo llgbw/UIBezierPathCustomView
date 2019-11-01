@@ -2,23 +2,12 @@
  
  
  iOS 贝塞尔曲线自定义图形.    
-
 效果gif图:
+
 ![image](https://github.com/llgbw/UIBezierPathCustomView/blob/master/show.gif)
 
 
-一.贝塞尔基本使用：
-1.创建贝塞尔曲线路径path对象.
-UIBezierPath *path = [UIBezierPath bezierPath];
-2.设置绘制图形的路径起点.
-CGPoint point = CGPointMake(<#CGFloat x#>, <#CGFloat y#>);
-[path moveToPoint:point];
-3.设置绘制图形的路径的其他点（简单理解为转折点、转向点）.
-CGPoint point = CGPointMake(<#CGFloat x#>, <#CGFloat y#>);
-[path addLineToPoint:point];
-
-
-二、举例: 以效果图左上角梯形为例子: 
+举例: 以效果图左上角梯形为例子: 
 
 // 1、创建按钮
 UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -51,6 +40,22 @@ UIBezierPath *path = [UIBezierPath bezierPath];
     shapLayer.path = self.path.CGPath;
     self.layer.mask = shapLayer;
 }
-至此绘制出左上角的梯形：
+至此绘制出左上角的梯形,但是如果 只要我们绘制出来的图形能点击,触发手势 要加以下触发手势判断
+
+// 点击的覆盖方法，点击时判断点是否在path内，YES则响应，NO则不响应
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+    BOOL res = [super pointInside:point withEvent:event];
+    if (res)
+    {
+        if ([self.path containsPoint:point])
+        {
+            return YES;
+        }
+        return NO;
+    }
+    return NO;
+}
 
 
+Done.
