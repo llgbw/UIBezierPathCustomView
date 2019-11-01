@@ -9,6 +9,11 @@
 
 举例: 以效果图左上角梯形为例子: 
 
+/* 所用宏： 
+#define kViewWidth(View) CGRectGetWidth(View.frame)
+#define kViewHeight(View) CGRectGetHeight(View.frame)
+ */
+
 // 1、创建按钮
 UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
 btn.frame = CGRectMake(20, 100, 120, 50);
@@ -17,11 +22,6 @@ btn.backgroundColor = [UIColor orangeColor];
 [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
 [self.view addSubview:btn];
 // 2、设置贝塞尔曲线路径
-
-/* 所用宏： 
-#define kViewWidth(View) CGRectGetWidth(View.frame)
-#define kViewHeight(View) CGRectGetHeight(View.frame)
- */
 
 UIBezierPath *path = [UIBezierPath bezierPath];
 
